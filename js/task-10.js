@@ -17,31 +17,19 @@ function createBoxes(amount) {
     newBox.style.width = `${boxWidth}px`;
     newBox.style.height = `${boxHeight}px`;
     newBox.style.backgroundColor = getRandomHexColor();
-    boxesArray.push(newBox)
+    boxesArray.push(newBox);
     boxWidth += 10;
     boxHeight += 10;
   }
   boxesContainerRef.append(...boxesArray);
-  inputRef.value = ''
+  inputRef.value = '';
 }
 
 function destroyBoxes() {
   boxesContainerRef.innerHTML = '';
-  inputRef.value = ''
+  inputRef.value = '';
 }
 
 inputRef.addEventListener('input', () => {});
 createButtonRef.addEventListener('click', () => createBoxes(inputRef.value));
 destroyButtonRef.addEventListener('click', () => destroyBoxes());
-
-
-
-
-
-
-
-
-
-
-
-
